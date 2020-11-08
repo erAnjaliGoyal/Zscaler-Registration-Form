@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <title>Zscaler Employment Form</title>
+    </head>
+    <body>
+        <div id="content">
+                <p>Employement Form</p>
+            <form autocomplete="on" id="empForm">
+                <div id="row">
+                    <label for="eName">Name:</label>
+                    <input type="text" id="eName" name="employeeName" placeholder="Enter Name" required/>
+                </div>
+                <div id="row">
+                    <label for="desc">Description:</label>
+                    <textarea id="description" name="description" rows="5" cols="20"></textarea>
+                </div>
+                <div id="row">
+                    <label>Employment Type:</label><br>
+
+                    <input type="radio" id="fullTime" name="employeeType" value="FULL_TIME" checked
+                    onClick="setSelect('FULL_TIME')" required>
+                    <label for="fullTime">Full Time</label>
+                    
+                    <input type="radio" id="partTime" name="employeeType" value="PART_TIME"
+                    onClick="setSelect('PART_TIME')">
+                    <label for="partTime">Part Time</label>
+                    
+                    <input type="radio" id="consultant" name="employeeType" value="CONSULTANT"
+                    onClick="setSelect('CONSULTANT')">
+                    <label for="consultant">Consultant</label>
+                </div>
+                <div id="row">
+                    <label id="contractLabel" for="contractTerm">Contract Term:</label>
+                    <select id="contractTerm" name="contractTerm"></select>
+                </div>
+                <div id="row">
+                    <label for="countryCode">Country Code:</label><br>
+                    <select id="countryCode" name="countryCode"></select>
+                </div>
+                <div id="row">
+                    <input type="submit"/>
+                </div>
+            </form>
+
+            <div>
+            </div>
+        </div>
+        <script src="index.js"></script>
+
+    </body>
+</html>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font: 16px Arial;  
+}
+
+#content {
+    border-style: groove;
+    width: 40%;
+    height: 50%;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px
+}
+
+#row {
+    margin: 15px;
+}
+
+label {
+    padding: 5px 0px;
+}
+
+input[type="text"], textarea {
+    padding: 5px;
+    border-radius: 8px
+}
+
+input[type=submit] {
+  padding: 10px;
+  background-color: DodgerBlue;
+  color: #fff;
+  border-radius: 3px;
+}
+select {
+    padding: 8px;
+    border-radius: 3px;
+}
+</style>
